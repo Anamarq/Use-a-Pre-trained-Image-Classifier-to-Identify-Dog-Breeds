@@ -1,0 +1,14 @@
+CNN model architecture used: resnet
+Number of images: 4
+Number of dogs images: 2
+Number of not dogs images: 2
+pct_correct_dogs: 100.0
+pct_correct_notdogs: 100.0
+pct_correct_breed: 0.0
+pct_label_matches: 50.0
+Misclassified breed for the dog. Real pet image is: dog and classifier label is: collie
+Misclassified breed for the dog. Real pet image is: dog and classifier label is: collie
+
+** Total Elapsed Runtime: 0:0:3
+
+ **Total time in seconds: 3.1949422359466553 
