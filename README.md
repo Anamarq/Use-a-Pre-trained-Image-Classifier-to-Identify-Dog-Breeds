@@ -38,9 +38,8 @@ To run the project, use the following commands:
   python check_images.py --dir <dog images folder path> --arch <architecture vgg | alexnet | resnet> --dogfile <textfile that contains dog names>
 - **Example:**
 To run the project with the VGG model, use the following command:
-```bash
-python check_images.py --dir pet_images/ --arch vgg --dogfile dognames.txt
-
+  ```bash
+  python check_images.py --dir pet_images/ --arch vgg --dogfile dognames.txt
 
 
 ## Refrences:
