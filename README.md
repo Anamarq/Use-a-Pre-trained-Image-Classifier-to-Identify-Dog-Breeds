@@ -41,6 +41,7 @@ To run the project with the VGG model, use the following command:
   ```bash
   python check_images.py --dir pet_images/ --arch vgg --dogfile dognames.txt
 
+In Linux, The task could be performed using the command sh run_models_batch_uploaded.sh, which created three text files with the results for each architecture: vgg_uploaded-images.txt, alexnet_uploaded-images.txt, and resnet_uploaded-images.txt.
 
 ## Refrences:
 https://www.udacity.com/course/ai-programming-python-nanodegree--nd089
