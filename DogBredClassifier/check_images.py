@@ -1,8 +1,7 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 # */AIPND-revision/intropyproject-classify-pet-images/check_images.py
-#
-# TODO 0: Add your information below for Programmer & Date Created.                                                                             
+#                                                   
 # PROGRAMMER: Ana Márquez Moncada
 # DATE CREATED: July 20, 2024                                 
 # REVISED DATE: 
@@ -50,19 +49,23 @@ def main():
     # the collection of these command line arguments from the function call as
     # the variable in_arg
     in_arg = get_input_args()
+    check_command_line_arguments(in_arg)
 
     # This function creates the results dictionary that contains the results, 
     # this dictionary is returned from the function call as the variable results
     results = get_pet_labels(in_arg.dir)
+    check_creating_pet_image_labels(results)
 
     # Creates Classifier Labels with classifier function, Compares Labels, 
     # and adds these results to the results dictionary - results
     classify_images(in_arg.dir, results, in_arg.arch)
+    check_classifying_images(results)
 
     # Adjusts the results dictionary to determine if classifier correctly 
     # classified images as 'a dog' or 'not a dog'. This demonstrates if 
     # model can correctly classify dog images as dogs (regardless of breed)
     adjust_results4_isadog(results, in_arg.dogfile)
+    check_classifying_labels_as_dogs(results)
 
     # This function creates the results statistics dictionary that contains a
     # summary of the results statistics (this includes counts & percentages). This
@@ -70,6 +73,7 @@ def main():
     # Calculates results of run and puts statistics in the Results Statistics
     # Dictionary - called results_stats
     results_stats = calculates_results_stats(results)
+    check_calculating_results(results, results_stats)
 
     # Prints summary results, incorrect classifications of dogs (if requested)
     # and incorrectly classified breeds (if requested)
