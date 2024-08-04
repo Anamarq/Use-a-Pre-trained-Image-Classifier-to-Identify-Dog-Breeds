@@ -78,16 +78,16 @@ def calculates_results_stats(results_dic):
     results_stats_dic["n_label_matches"] = 0
     #Number of images:
     results_stats_dic['n_images'] = len(results_dic)
-    for key in results_dic:
-        if results_dic[key][3] == 1 and results_dic[key][4] == 1:
+    for value in results_dic.values():
+        if value[3] == 1 and value[4] == 1:
             results_stats_dic["n_dogs_matches"] += 1
-        if results_dic[key][3] == 1:
+        if value[3] == 1:
             results_stats_dic["n_dogs_img"] += 1
-        if results_dic[key][3] == 0 and results_dic[key][4] == 0:
+        if value[3] == 0 and value[4] == 0:
             results_stats_dic["n_non_dog_matches"] += 1
-        if results_dic[key][3] == 1 and results_dic[key][2] == 1:
+        if value[3] == 1 and value[2] == 1:
             results_stats_dic["n_breed_matches"] += 1
-        if results_dic[key][2] == 1:
+        if value[2] == 1:
             results_stats_dic["n_label_matches"] += 1
     # Number of Not Dog Images
     results_stats_dic["n_notdogs_img"] = results_stats_dic['n_images'] - results_stats_dic["n_dogs_img"]  

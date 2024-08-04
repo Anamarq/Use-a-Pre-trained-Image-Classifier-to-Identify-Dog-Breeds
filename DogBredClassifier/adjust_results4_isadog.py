@@ -72,9 +72,9 @@ def adjust_results4_isadog(results_dic, dogfile):
             else:
                 dogs_dict[line] = 1
     # extend results_dict index 3, 4
-    for key in results_dic:
-        results_dic[key].extend([0,0])
-        if results_dic[key][0] in dogs_dict:
-            results_dic[key][3] = 1
-        if results_dic[key][1] in dogs_dict:
-            results_dic[key][4] = 1
+    for value in results_dic.values():
+        value.extend([0,0])
+        if value[0] in dogs_dict:
+            value[3] = 1
+        if value[1] in dogs_dict:
+            value[4] = 1

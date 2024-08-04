@@ -39,10 +39,10 @@ def get_pet_labels(image_dir):
     #list filenames img
     filename_list = listdir(image_dir)
     results_dic = {}
-    for idx in range(len(filename_list)):
+    for filename in filename_list:
       #for files like .DS_store
-      if filename_list[idx][0] != ".":
-        pet_img = filename_list[idx]
+      if filename[0] != ".":
+        pet_img = filename
         sep_pet_img = pet_img.lower().split("_") #each word of the bread separate 
         pet_label = ""
         #create each pet label
@@ -51,8 +51,8 @@ def get_pet_labels(image_dir):
                 pet_label += word + " "
         #Strip off starting/trailing whitespace characters 
         pet_label = pet_label.strip()
-        if filename_list[idx] not in results_dic:
-          results_dic[filename_list[idx]] = [pet_label]    
+        if filename not in results_dic:
+          results_dic[filename] = [pet_label]    
         else:
           print("** Warning: Duplicate files exist in directory:", in_files[idx])
 
